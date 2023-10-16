@@ -4,6 +4,7 @@ from .forms import AddExerciseForm
 from .models import Exercise
 
 
+
 def add_exercise(request):
     context = {'form': AddExerciseForm()}
     return render(request, 'exercise_app/add_exercise.html', context)
@@ -14,4 +15,6 @@ def exercise_list(request):
 
 
 def index(request):
-    return HttpResponse("Wagwaan eh blud this is the homepage nahmean")
+    return render(request, 'exercise_app/index.html')
+
+
