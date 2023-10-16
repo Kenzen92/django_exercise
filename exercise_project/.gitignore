@@ -1,0 +1,20 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+ENV/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Local settings (customize this to your needs)
+settings_local.py
+
+# Static files (usually collected into a 'static' directory)
+static/
+
+# Media files (user-uploaded content)
+media/
