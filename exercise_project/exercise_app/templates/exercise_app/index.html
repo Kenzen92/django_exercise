@@ -1,32 +1,44 @@
-{% extends 'exercise_app/base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'exercise_app/base.html' %} {% load static %} {% block content %}
 <div class="hero-section">
-    <div class="hero-content">
-        <h1>Welcome to Workout Tracker</h1>
-        <p>Track your fitness journey and achieve your goals with our workout tracker app.</p>
-
-    </div>
-    <img src="{% static 'exercise_app/images/hero-image.png' %}" alt="Fitness Image">
+  <div class="hero-content">
+    <h1>Welcome to Workout Tracker</h1>
+    <p>
+      Track your fitness journey and achieve your goals with our workout tracker
+      app.
+    </p>
+  </div>
+  <img
+    src="{% static 'exercise_app/images/hero-image.png' %}"
+    alt="Fitness Image"
+  />
 </div>
 
 <div class="features-section">
-    <div class="feature">
-        <img src="{% static 'exercise_app/images/feature1.png' %}" alt="Feature 1">
-        <h2>Track Your Workouts</h2>
-        <p>Log your exercises and keep a record of your progress.</p>
-    </div>
+  <div class="feature">
+    <img
+      src="{% static 'exercise_app/images/feature1.png' %}"
+      alt="Feature 1"
+    />
+    <h2>Track Your Workouts</h2>
+    <p>Log your exercises and keep a record of your progress.</p>
+  </div>
 
-    <div class="feature">
-        <img src="{% static 'exercise_app/images/feature2.png' %}" alt="Feature 2">
-        <h2>Set Goals</h2>
-        <p>Define your fitness goals and work towards achieving them.</p>
-    </div>
+  <div class="feature">
+    <img
+      src="{% static 'exercise_app/images/feature2.png' %}"
+      alt="Feature 2"
+    />
+    <h2>Set Goals</h2>
+    <p>Define your fitness goals and work towards achieving them.</p>
+  </div>
 
-    <div class="feature">
-        <img src="{% static 'exercise_app/images/feature3.png' %}" alt="Feature 3">
-        <h2>Stay Motivated</h2>
-        <p>Stay motivated with our community and fitness challenges.</p>
-    </div>
+  <div class="feature">
+    <img
+      src="{% static 'exercise_app/images/feature3.png' %}"
+      alt="Feature 3"
+    />
+    <h2>Stay Motivated</h2>
+    <p>Stay motivated with our community and fitness challenges.</p>
+  </div>
 </div>
 {% endblock %}
