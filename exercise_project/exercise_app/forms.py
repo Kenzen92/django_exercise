@@ -5,12 +5,6 @@ from crispy_forms.layout import Submit
 from django.urls import reverse_lazy
 from .models import Exercise
 
-subjectChoices = (
-    (1, 'Web development'),
-    (2, 'Pussyclaarting'),
-    (3, 'Skullduggery')
-)
-
 class AddExerciseForm(forms.ModelForm):
     class Meta:
         model = Exercise

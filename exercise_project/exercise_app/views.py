@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from django.http import HttpResponse
 from .forms import AddExerciseForm
 from .models import Exercise
-
 
 
 def add_exercise(request):
@@ -11,12 +11,11 @@ def add_exercise(request):
         if form.is_valid():
             new_exercise = form.save()
             print("Form valid: ", new_exercise)
-            return redirect('success_page')  # Change 'success_page' to the actual URL name
-        else:
-            print("Failed to validate form")
+            return redirect(reverse_lazy('index'))
     else:
         context = {'form': AddExerciseForm()}
         return render(request, 'exercise_app/add_exercise.html', context)
+
 
 def exercise_list(request):
     exercises = Exercise.objects.all()  # Replace 'Exercise' with your model name
