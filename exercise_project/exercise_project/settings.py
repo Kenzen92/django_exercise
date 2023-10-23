@@ -125,10 +125,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Define the location where Django should collect static files.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Define the directories where Django should find static files for each app.
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'exercise_app/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
 
 
 # Default primary key field type

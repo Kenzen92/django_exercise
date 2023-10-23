@@ -19,5 +19,11 @@ RUN pip install -r requirements.txt
 # Expose the port that Django runs on (default is 8000)
 EXPOSE 8000
 
-# Start the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# Copy the entrypoint script
+COPY entrypoint.sh /app/entrypoint.sh
+
+# Make the entrypoint script executable
+RUN chmod +x /app/entrypoint.sh
+
+
+CMD ["/app/entrypoint.sh"]

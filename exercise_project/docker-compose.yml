@@ -5,6 +5,7 @@ services:
     build: .
     ports:
       - "8000:8000"
+    command: /app/entrypoint.sh
     volumes:
       - .:/app
     depends_on:
