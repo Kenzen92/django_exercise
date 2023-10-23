@@ -81,14 +81,13 @@ WSGI_APPLICATION = 'exercise_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yourdatabase',  # Replace with your desired database name
-        'USER': 'yourusername',  # Replace with your PostgreSQL username
-        'PASSWORD': 'yourpassword',  # Replace with your PostgreSQL password
-        'HOST': 'localhost',  # Replace with your PostgreSQL server's host
+        'NAME': 'postgres',  # Replace with your desired database name
+        'USER': 'postgres',  # Replace with your PostgreSQL username
+        'PASSWORD': 'postgres',  # Replace with your PostgreSQL password
+        'HOST': 'db',  # Replace with your PostgreSQL server's host
         'PORT': '5432',  # Replace with the port number where PostgreSQL is running
     }
 }
-
 
 
 # Password validation
