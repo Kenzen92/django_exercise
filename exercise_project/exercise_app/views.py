@@ -3,13 +3,16 @@ from django.urls import reverse_lazy
 from django.http import HttpResponse
 from .forms import AddExerciseForm
 from .models import Exercise
+from django.utils import timezone 
 
 
 def add_exercise(request):
     if request.method == "POST":
         form = AddExerciseForm(request.POST)
+        
         if form.is_valid():
-            new_exercise = form.save()
+            new_exercise = form.save(commit=False)
+            new_exercise.updated_at = timezone.now() 
             print("Form valid: ", new_exercise)
             return redirect(reverse_lazy('index'))
     else:
