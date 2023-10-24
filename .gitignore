@@ -18,3 +18,6 @@ static/
 
 # Media files (user-uploaded content)
 media/
+
+#ssh entrypoint
+.*ssh
