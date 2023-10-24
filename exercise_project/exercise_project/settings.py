@@ -78,17 +78,15 @@ WSGI_APPLICATION = 'exercise_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# Database configuration
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'exercise_db',  # Replace with your desired database name
-        'USER': 'james',  # Replace with your PostgreSQL username
-        'PASSWORD': 'xxxx!',  # Replace with your PostgreSQL password
-        'HOST': '192.168.1.107',  # Replace with your PostgreSQL server's host
-        'PORT': '5432',  # Replace with the port number where PostgreSQL is running
-        'OPTIONS': {
-            'sslmode': 'require',  # Use 'require' for a mandatory SSL connection
-        }
+        'ENGINE': 'django.db.backends.mysql',  # Use the MySQL database backend
+        'NAME': 'exercise_db',  # Replace with your database name
+        'USER': 'james',  # Replace with your database username
+        'PASSWORD': 'Lampies001!',  # Replace with your database password
+        'HOST': '192.168.1.107',  # IP address of your Raspberry Pi
+        'PORT': '3306',  # Port where MariaDB is running
     }
 }
 

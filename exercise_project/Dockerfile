@@ -15,7 +15,6 @@ COPY exercise_project/ /app/
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
-
 # Expose the port that Django runs on (default is 8000)
 EXPOSE 8000
 

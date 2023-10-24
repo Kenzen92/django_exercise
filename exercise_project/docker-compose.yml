@@ -7,7 +7,14 @@ services:
       - "8000:8000"
     command: /app/entrypoint.sh
     volumes:
-      - .:/app
+      - nfsvolume:/app
+
+volumes:
+  nfsvolume:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.1.107,nolock,soft,rw"
+      device: ":/mnt/nfsshare"
     # depends_on:
     #   - db
   # db:
