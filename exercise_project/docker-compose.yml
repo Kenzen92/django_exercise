@@ -21,5 +21,6 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data  # Define a volume for the database data
 
+
 volumes:
   pg_data:  # Define a named volume for database data persistence
