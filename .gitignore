@@ -20,4 +20,4 @@ static/
 media/
 
 #ssh entrypoint
-.*sh
+*.sh
