@@ -8,19 +8,19 @@ services:
     command: /app/entrypoint.sh
     volumes:
       - .:/app
-    depends_on:
-      - db
-  db:
-    image: postgres:13
-    restart: always
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-    ports:
-      - "5432:5432"
-    volumes:
-      - pg_data:/var/lib/postgresql/data  # Define a volume for the database data
+    # depends_on:
+    #   - db
+  # db:
+  #   image: postgres:13
+  #   restart: always
+  #   environment:
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_USER: postgres
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - pg_data:/var/lib/postgresql/data  # Define a volume for the database data
 
 
-volumes:
-  pg_data:  # Define a named volume for database data persistence
+# volumes:
+#   pg_data:  # Define a named volume for database data persistence
