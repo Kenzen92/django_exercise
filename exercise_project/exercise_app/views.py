@@ -1,20 +1,22 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.http import HttpResponse
 from .forms import AddExerciseForm
 from .models import Exercise
-from django.utils import timezone 
+from django.forms.utils import ErrorList
 
 
 def add_exercise(request):
     if request.method == "POST":
         form = AddExerciseForm(request.POST)
-        
+
         if form.is_valid():
-            new_exercise = form.save(commit=False)
-            new_exercise.updated_at = timezone.now() 
+            new_exercise = form.save()
             print("Form valid: ", new_exercise)
             return redirect(reverse_lazy('index'))
+        else:
+            # Print form errors
+            print("Invalid form:", form.errors)
+            return redirect(reverse_lazy('add_exercise'))
     else:
         context = {'form': AddExerciseForm()}
         return render(request, 'exercise_app/add_exercise.html', context)
@@ -28,5 +30,3 @@ def exercise_list(request):
 
 def index(request):
     return render(request, 'exercise_app/index.html')
-
-

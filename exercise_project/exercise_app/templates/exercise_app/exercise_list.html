@@ -1,8 +1,9 @@
 {% extends 'exercise_app/base.html' %} {% block content %}
 
-
 <h1>View Exercises</h1>
 {% for eachExercise in exercises %}
-<p>{{eachExercise}}<p>
-    {% endfor %}
-{% endblock %}
+<h2>{{eachExercise.name}}</h2>
+<p>{{eachExercise.category}}</p>
+<p>{{eachExercise.duration}}</p>
+<p>{{eachExercise.date}}</p>
+{% endfor %} {% endblock %}
