@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from .forms import AddExerciseForm
 from .models import Exercise
-from django.forms.utils import ErrorList
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def add_exercise(request):
     if request.method == "POST":
         form = AddExerciseForm(request.POST)
